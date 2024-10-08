@@ -17,19 +17,19 @@ public class CactusBehavior : MonoBehaviour
     {
         if(_animator != null)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown("Space"))
             {
-                _animator.SetTrigger("AttackTrigger");
+                _animator.Play("Attack");
             }
 
-            if(Input.GetKeyDown(KeyCode.W))
+            if(Input.GetKeyDown("W"))
             {
-                _animator.SetTrigger("WalkTrigger");
+                _animator.Play("Walk_Mec");
             }
 
-            if(Input.GetKeyDown(KeyCode.I))
+            if(Input.GetKeyDown("I"))
             {
-                _animator.SetTrigger("IdleTrigger");
+                _animator.Play("Idle");
             }
         }
     }
