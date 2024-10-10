@@ -17,19 +17,22 @@ public class CactusBehavior : MonoBehaviour
     {
         if(_animator != null)
         {
-            if(Input.GetKeyDown("Space"))
+            if(Input.GetKeyDown(KeyCode.Space))
             {
-                _animator.Play("Attack");
+                Debug.Log("Space pressed, triggering attack.");
+                _animator.SetTrigger("TrAttack");
             }
 
-            if(Input.GetKeyDown("W"))
+            if(Input.GetKeyDown(KeyCode.W))
             {
-                _animator.Play("Walk_Mec");
+                Debug.Log("W pressed");
+                _animator.SetTrigger("TrWalk");
             }
 
-            if(Input.GetKeyDown("I"))
+            if(Input.GetKeyDown(KeyCode.I))
             {
-                _animator.Play("Idle");
+                Debug.Log("I pressed");
+                _animator.SetTrigger("TrIdle");
             }
         }
     }
